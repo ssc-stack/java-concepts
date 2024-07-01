@@ -9,7 +9,7 @@ class Node implements Iterable<Node> {
     // Constructor to initialize data only
     public Node(int data) {
         this.data = data;
-        this.next = null;
+        this.next=null;
     }
 
     // Constructor to initialize data and next node
