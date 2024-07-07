@@ -6,7 +6,7 @@ public class SharedResource {
     private AtomicInteger sharedValue=new AtomicInteger(0);
 
     public void add(int value) {
-        sharedValue.incrementAndGet();
+        sharedValue.incrementAndGet();//
     }
 
     public void subtract(int value) {
