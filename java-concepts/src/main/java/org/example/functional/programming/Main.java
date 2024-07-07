@@ -1,8 +1,11 @@
 package org.example.functional.programming;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.*;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 public class Main {
 
@@ -22,6 +25,10 @@ public class Main {
         //Number.printDistinctNumbers();
         //Number.sortInDescendingOrder();
         //System.out.println(Number.evenNumberList());
+
+        IntStream.range(1,11).peek(System.out::println).sum();
+        //IntStream.iterate(1,e->e+100000000).peek(System.out::println).sum(); // Infinite Loop
+        System.out.println(LongStream.rangeClosed(1,500).mapToObj(BigInteger::valueOf).reduce(BigInteger::multiply));
     }
 
     public static void courseHelper() {
@@ -54,8 +61,8 @@ public class Main {
 
     public static void main(String[] args) {
         numberHelper();
-        courseHelper();
-        someOtherFunctionalInterfaces();
+        //courseHelper();
+        //someOtherFunctionalInterfaces();
         //,UnaryOperator, BiPredicate, BiConsumer, BiFunction
     }
 }
