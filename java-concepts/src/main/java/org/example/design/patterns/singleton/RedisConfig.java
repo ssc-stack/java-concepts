@@ -1,3 +1,5 @@
+/* Singleton Design Pattern */
+
 package org.example.design.patterns.singleton;
 
 public class RedisConfig {
