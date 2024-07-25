@@ -1,8 +1,6 @@
 package org.example.design.patterns.prototype;
 
-import lombok.Setter;
 
-@Setter
 public class Student implements Cloneable {
     private int id;
     private String name;
@@ -24,4 +22,19 @@ public class Student implements Cloneable {
         return new Student(this);
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }
