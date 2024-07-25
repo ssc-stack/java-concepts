@@ -15,6 +15,6 @@ public class SQL implements Query {
 
     @Override
     public String getQuery() {
-        return null;
+        return query;
     }
 }
