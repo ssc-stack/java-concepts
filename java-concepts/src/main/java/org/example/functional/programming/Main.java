@@ -1,7 +1,10 @@
 package org.example.functional.programming;
 
+import org.example.custom_sorting.Student;
+
 import java.math.BigInteger;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.*;
 import java.util.stream.IntStream;
@@ -59,10 +62,17 @@ public class Main {
         System.out.println(biFunction.apply("Shashank",25));
     }
 
+    public static void print(int number) {
+        System.out.println(number);
+    }
+
     public static void main(String[] args) {
-        numberHelper();
+        //numberHelper();
         //courseHelper();
         //someOtherFunctionalInterfaces();
         //,UnaryOperator, BiPredicate, BiConsumer, BiFunction
+
+        List<Integer> list=List.of(1,2,3,4,5,6,7,8,9,10);
+        list.stream().forEach(System.out::println);
     }
 }
