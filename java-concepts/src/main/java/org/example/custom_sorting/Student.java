@@ -1,5 +1,10 @@
 package org.example.custom_sorting;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class Student implements Comparable<Student>{
     private String name;
     private int age;

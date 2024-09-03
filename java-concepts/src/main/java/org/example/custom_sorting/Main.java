@@ -16,14 +16,14 @@ public class Main {
         students.add(s3);
         students.add(s4);
 
-        Collections.sort(students,Collections.reverseOrder());
-
+        //Collections.sort(students,Comparator.comparing(Student::getAge));
+        students.sort(Comparator.comparing(Student::getName).reversed());
         for(Student student: students){
             System.out.println(student);
         }
     }
 
     public static void main(String[] args) {
-        //comparableDemo();
+        comparableDemo();
     }
 }
