@@ -43,8 +43,32 @@ public class Main {
         courses.stream().map(course->course+":"+course.length()).forEach(System.out::println);
     }
 
+    public static int squareSum(List<Integer> numbers) {
+        return numbers.stream().map(x->x*x).reduce(0,Integer::sum);
+    }
+
+    public static int cubeSum(List<Integer> numbers) {
+        return numbers.stream().map(x->x*x*x).reduce(0,Integer::sum);
+    }
+
+    public static int oddSum(List<Integer> numbers) {
+        return numbers.stream().filter(x->x%2!=0).reduce(0,Integer::sum);
+    }
+
+    public static int evenSum(List<Integer> numbers) {
+        return numbers.stream().filter(x->x%2==0).reduce(0,Integer::sum);
+    }
+
+    public static void printDistinct(List<Integer> numbers) {
+        numbers.stream().distinct().forEach(System.out::println);
+    }
+
+    public static void sortInAscendingOrder(List<String> courses) {
+        courses.stream().distinct().sorted().forEach(System.out::println);
+    }
+
     public static void main(String[] args) {
-        List<Integer> numbers=List.of(1,2,3,4,5,6,7,8,9,10);
+        List<Integer> numbers=List.of(1,2,3,4,5,6,7,8,9,10,10);
         List<String> courses=List.of("Spring","Spring Boot","AWS","Java","Swimming","Ethical Hacking");
         //printOddNumbers(numbers);
         //printCourses(courses);
@@ -54,8 +78,14 @@ public class Main {
         //printOddCubes(numbers);
         //printCoursesLength(courses);
 
-        System.out.println(sum(numbers));
+       /* System.out.println(sum(numbers));
         System.out.println(min(numbers));
         System.out.println(max(numbers));
+        System.out.println(squareSum(numbers));
+        System.out.println(cubeSum(numbers));
+        System.out.println(oddSum(numbers));
+        System.out.println(evenSum(numbers));
+        printDistinct(numbers);*/
+        sortInAscendingOrder(courses);
     }
 }
