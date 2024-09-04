@@ -4,6 +4,17 @@ import java.util.*;
 
 public class Main {
 
+    public static int min(List<Integer> numbers) {
+        return numbers.stream().reduce(Integer.MAX_VALUE,Integer::min);
+    }
+
+    public static int max(List<Integer> numbers) {
+        return numbers.stream().reduce(Integer.MIN_VALUE,Integer::max);
+    }
+
+    public static int sum(List<Integer> numbers) {
+       return numbers.stream().reduce(0,Integer::sum);
+    }
     public static void printOddNumbers(List<Integer> numbers) {
         numbers.stream().filter(number -> number % 2 != 0).forEach(System.out::println);
     }
@@ -41,6 +52,10 @@ public class Main {
         //printCourseWithLength4(courses);
         //printSquares(numbers);
         //printOddCubes(numbers);
-        printCoursesLength(courses);
+        //printCoursesLength(courses);
+
+        System.out.println(sum(numbers));
+        System.out.println(min(numbers));
+        System.out.println(max(numbers));
     }
 }
