@@ -1,6 +1,7 @@
 package org.example.functional.programming.v1;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -67,6 +68,18 @@ public class Main {
         courses.stream().distinct().sorted().forEach(System.out::println);
     }
 
+    public static void sortInDescendingOrder(List<String> courses) {
+        courses.stream().distinct().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+    }
+
+    public static void sortByLength(List<String> courses) {
+        courses.stream().distinct().sorted(Comparator.comparing(String::length)).forEach(System.out::println);
+    }
+
+    public static List<Integer> squareList (List<Integer> numbers) {
+        return numbers.stream().map(x->x*x).collect(Collectors.toList());
+    }
+
     public static void main(String[] args) {
         List<Integer> numbers=List.of(1,2,3,4,5,6,7,8,9,10,10);
         List<String> courses=List.of("Spring","Spring Boot","AWS","Java","Swimming","Ethical Hacking");
@@ -86,6 +99,9 @@ public class Main {
         System.out.println(oddSum(numbers));
         System.out.println(evenSum(numbers));
         printDistinct(numbers);*/
-        sortInAscendingOrder(courses);
+        //sortInAscendingOrder(courses);
+        //sortInDescendingOrder(courses);
+        //sortByLength(courses);
+        System.out.println(squareList(numbers));
     }
 }
