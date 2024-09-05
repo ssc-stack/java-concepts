@@ -106,7 +106,7 @@ public class Main {
 
         System.out.println(movies.stream().max(Comparator.comparing(Movie::getRating)));
         System.out.println(movies.stream().min(Comparator.comparing(Movie::getRating)));
-        System.out.println(movies.stream().count());
+        System.out.println(movies.stream());
         //System.out.println(movies.stream().mapToInt(Movie::getRating).sum());
 
     }
@@ -121,7 +121,6 @@ public class Main {
         //printSquares(numbers);
         //printOddCubes(numbers);
         //printCoursesLength(courses);
-
        /* System.out.println(sum(numbers));
         System.out.println(min(numbers));
         System.out.println(max(numbers));
