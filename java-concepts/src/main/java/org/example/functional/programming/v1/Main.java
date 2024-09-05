@@ -64,6 +64,10 @@ public class Main {
         numbers.stream().distinct().forEach(System.out::println);
     }
 
+    public void print(int number) {
+        System.out.println(number);
+    }
+
     public static void sortInAscendingOrder(List<String> courses) {
         courses.stream().distinct().sorted().forEach(System.out::println);
     }
