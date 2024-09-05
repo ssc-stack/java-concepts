@@ -84,6 +84,24 @@ public class Main {
         return numbers.stream().map(x->x*x).collect(Collectors.toList());
     }
 
+    public static void movieManager() {
+        List<Movie> movies=List.of(new Movie(1,"Movie1",5),
+                new Movie(2,"Movie2",4),
+                new Movie(3,"Movie3",3),
+                new Movie(4,"Movie4",2),
+                new Movie(5,"Movie5",1));
+
+        System.out.println(movies.stream().filter(movie->movie.getRating()>3).collect(Collectors.toList()));
+        System.out.println(movies.stream().anyMatch(movie->movie.getRating()>3));
+        System.out.println(movies.stream().noneMatch(movie->movie.getRating()>5));
+        System.out.println(movies.stream().allMatch(movie->movie.getRating()>0));
+
+        //movies.sort(Comparator.comparing(Movie::getRating).reversed()); List.of() return immutable list
+        movies.forEach(System.out::println);
+
+
+    }
+
     public static void main(String[] args) {
         List<Integer> numbers=List.of(1,2,3,4,5,6,7,8,9,10,10);
         List<String> courses=List.of("Spring","Spring Boot","AWS","Java","Swimming","Ethical Hacking");
@@ -106,6 +124,8 @@ public class Main {
         //sortInAscendingOrder(courses);
         //sortInDescendingOrder(courses);
         //sortByLength(courses);
-        System.out.println(squareList(numbers));
+        //System.out.println(squareList(numbers));
+
+        movieManager();
     }
 }
