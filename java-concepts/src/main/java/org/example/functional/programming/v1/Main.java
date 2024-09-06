@@ -104,7 +104,7 @@ public class Main {
         //movies.sort(Comparator.comparing(Movie::getRating).reversed().thenComparing(Movie::getId));
         //movies.forEach(System.out::println);
 
-        System.out.println(movies.stream().max(Comparator.comparing(Movie::getRating)));
+        //System.out.println(movies.stream().max(Comparator.comparing(Movie::getRating)));
         System.out.println(movies.stream().min(Comparator.comparing(Movie::getRating)));
         System.out.println(movies.stream());
         //System.out.println(movies.stream().mapToInt(Movie::getRating).sum());
