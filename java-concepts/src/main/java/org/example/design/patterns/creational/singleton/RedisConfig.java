@@ -1,6 +1,6 @@
 /* Singleton Design Pattern */
 
-package org.example.design.patterns.singleton;
+package org.example.design.patterns.creational.singleton;
 
 public class RedisConfig {
     private String url;

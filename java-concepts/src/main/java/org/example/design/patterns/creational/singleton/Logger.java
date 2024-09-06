@@ -1,4 +1,4 @@
-package org.example.design.patterns.singleton;
+package org.example.design.patterns.creational.singleton;
 /*
 
 import org.springframework.boot.logging.LogLevel;
