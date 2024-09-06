@@ -17,9 +17,14 @@ public class RedisConfig {
         this.port = port;
     }
 
+    // Double-Checked Locking - More Efficient [ can use only synchronized keyword at method level but that will be inefficient ]
     public static RedisConfig getInstance() {
-        if(INSTANCE== null) {
-            INSTANCE=new RedisConfig("localhost","redis","strong",3329);
+        if (INSTANCE == null) {
+            synchronized (RedisConfig.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new RedisConfig("localhost", "redis", "strong", 3329);
+                }
+            }
         }
         return INSTANCE;
     }
