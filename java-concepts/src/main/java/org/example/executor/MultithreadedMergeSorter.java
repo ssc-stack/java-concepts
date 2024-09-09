@@ -1,15 +1,14 @@
 package org.example.executor;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.*;
 
-public class MutlithreadedMergeSorter implements Callable<List<Integer>>{
+public class MultithreadedMergeSorter implements Callable<List<Integer>>{
     private ExecutorService executorService;
     private List<Integer> arr;
 
-    public MutlithreadedMergeSorter(ExecutorService executorService,List<Integer> arr) {
+    public MultithreadedMergeSorter(ExecutorService executorService, List<Integer> arr) {
         this.executorService=executorService;
         this.arr=arr;
     }
@@ -31,8 +30,8 @@ public class MutlithreadedMergeSorter implements Callable<List<Integer>>{
         List<Integer> left=arr.subList(low,mid+1);
         List<Integer> right=arr.subList(mid+1,high+1);
 
-        MutlithreadedMergeSorter leftTask=new MutlithreadedMergeSorter(executorService,left);
-        MutlithreadedMergeSorter rightTask=new MutlithreadedMergeSorter(executorService,right);
+        MultithreadedMergeSorter leftTask=new MultithreadedMergeSorter(executorService,left);
+        MultithreadedMergeSorter rightTask=new MultithreadedMergeSorter(executorService,right);
 
         Future<List<Integer>> leftListFuture = executorService.submit(leftTask);
         Future<List<Integer>> rightListFuture = executorService.submit(rightTask);
