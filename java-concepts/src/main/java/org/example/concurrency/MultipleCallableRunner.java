@@ -1,12 +1,10 @@
 package org.example.concurrency;
 
-import org.example.generics.Pair;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
-public class MutipleCallableRunner {
+public class MultipleCallableRunner {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
         String[] predefinedNames = {"Shashank", "Aarav", "Vivaan", "Aditya", "Vihaan", "Arjun",
