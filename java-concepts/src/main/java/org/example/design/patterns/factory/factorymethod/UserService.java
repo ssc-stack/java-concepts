@@ -3,7 +3,7 @@ package org.example.design.patterns.factory.factorymethod;
 public class UserService {
 
 
-    Database db;
+    private Database db;
 
     public UserService(Database db) {
         this.db = db;
