@@ -41,7 +41,7 @@ public class MultithreadedMergeSorter implements Callable<List<Integer>>{
 
         System.out.println("Thread JOINING: " + Thread.currentThread().getName());
         System.out.println("Sorted left: " + sortedLeft);
-        System.out.println("Sorted right " + sortedRight);
+        System.out.println("Sorted right " + sortedRight);//
 
         List<Integer> result=merge(sortedLeft,sortedRight);
         return result;
