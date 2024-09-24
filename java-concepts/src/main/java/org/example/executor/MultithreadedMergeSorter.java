@@ -27,7 +27,7 @@ public class MultithreadedMergeSorter implements Callable<List<Integer>>{
         int high=arr.size()-1;
         int mid=low+(high-low)/2;
 
-        List<Integer> left=arr.subList(low,mid+1);
+        List<Integer> left=arr.subList(low,mid+1);//
         List<Integer> right=arr.subList(mid+1,high+1);
 
         MultithreadedMergeSorter leftTask=new MultithreadedMergeSorter(executorService,left);
