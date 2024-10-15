@@ -53,6 +53,10 @@ public class Main {
         return numbers.stream().filter(n->n%2==0).map(n->n*n*n).reduce(0,Integer::sum);
     }
 
+    public static void printSortedDistinctCourses(List<String> courses) {
+        courses.stream().distinct().sorted().forEach(System.out::println);
+    }
+
     public static void main(String[] args) {
         List<Integer> numbers=List.of(1,2,3,4,5,6,7,8,9,10);
         //numbers.stream().forEach(Main::printNumbers);
@@ -70,6 +74,6 @@ public class Main {
         //System.out.println(addNumbers(numbers));
         //System.out.println(evenSquareSum(numbers));
         //System.out.println(evenCubeSum(numbers));
-
+        printSortedDistinctCourses(courses);
     }
 }
