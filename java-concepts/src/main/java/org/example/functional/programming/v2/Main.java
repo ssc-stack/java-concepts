@@ -45,7 +45,8 @@ public class Main {
         //numbers.stream().forEach(System.out::println);
         //printEvenNumbers(numbers);
         //printOddNumbers(numbers);
-        printEvenSquares(numbers);
+        //printEvenSquares(numbers)
+        printOddCubes(numbers);
         List<String> courses=List.of("Java","Python","JavaScript","C++","Ruby","Rust","Go","Kotlin","Swift","Scala");
         //printCourses(courses);
         //printCoursesThatStartsWithS(courses);
