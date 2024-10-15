@@ -68,8 +68,8 @@ public class Main {
         //printCoursesThatHaveAtLeastFourLetters(courses);
         //printCoursesLength(courses);
         //System.out.println(addNumbers(numbers));
-        System.out.println(evenSquareSum(numbers));
-        System.out.println(evenCubeSum(numbers));
+        //System.out.println(evenSquareSum(numbers));
+        //System.out.println(evenCubeSum(numbers));
 
     }
 }
