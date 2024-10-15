@@ -66,7 +66,7 @@ public class Main {
         //printOddNumbers(numbers);
         //printEvenSquares(numbers)
         //printOddCubes(numbers);
-        List<String> courses=List.of("Java","Python","JavaScript","C++","Ruby","Rust","Go","Kotlin","Swift","Scala");
+        List<String> courses=List.of("Java","Python","JavaScript","C++","Ruby","Rust","Go","Kotlin","Swift","Scala","Java","Python","JavaScript","C++","Ruby","Rust","Go","Kotlin","Swift","Scala");
         //printCourses(courses);
         //printCoursesThatStartsWithS(courses);
         //printCoursesThatHaveAtLeastFourLetters(courses);
