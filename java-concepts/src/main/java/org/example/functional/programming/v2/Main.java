@@ -3,6 +3,7 @@ package org.example.functional.programming.v2;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -62,6 +63,11 @@ public class Main {
         numbers.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
     }
 
+    public static void createCoursesLengthList(List<String> courses) {
+        List<Integer> coursesLength=courses.stream().map(course->course.length()).collect(Collectors.toList());
+        System.out.println(coursesLength);
+    }
+
     public static void main(String[] args) {
         List<Integer> numbers=List.of(1,2,3,4,5,6,7,8,9,10);
         //numbers.stream().forEach(Main::printNumbers);
@@ -80,6 +86,7 @@ public class Main {
         //System.out.println(evenSquareSum(numbers));
         //System.out.println(evenCubeSum(numbers));
         //printSortedDistinctCourses(courses);
-        sortNumbersInDescendingOrder(numbers);
+        //sortNumbersInDescendingOrder(numbers);
+        createCoursesLengthList(courses);
     }
 }
