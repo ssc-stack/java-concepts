@@ -21,6 +21,10 @@ public class Main {
         courses.stream().forEach(System.out::println);
     }
 
+    public static void printCoursesThatStartsWithS(List<String> courses) {
+        courses.stream().filter(course->course.startsWith("S")).forEach(System.out::println);
+    }
+
     public static void main(String[] args) {
         List<Integer> numbers=List.of(1,2,3,4,5,6,7,8,9,10);
         //numbers.stream().forEach(Main::printNumbers);
@@ -29,6 +33,7 @@ public class Main {
         //printEvenNumbers(numbers);
         //printOddNumbers(numbers);
         List<String> courses=List.of("Java","Python","JavaScript","C++","Ruby","Rust","Go","Kotlin","Swift","Scala");
-        printCourses(courses);
+        //printCourses(courses);
+        printCoursesThatStartsWithS(courses);
     }
 }
