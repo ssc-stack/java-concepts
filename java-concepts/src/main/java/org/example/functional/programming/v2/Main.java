@@ -41,6 +41,10 @@ public class Main {
         courses.stream().map(course->course.length()).forEach(System.out::println);
     }
 
+    public static int addNumbers(List<Integer> numbers) {
+        return numbers.stream().reduce(0,(num1,num2)->num1+num2);
+    }
+
     public static void main(String[] args) {
         List<Integer> numbers=List.of(1,2,3,4,5,6,7,8,9,10);
         //numbers.stream().forEach(Main::printNumbers);
@@ -54,7 +58,8 @@ public class Main {
         //printCourses(courses);
         //printCoursesThatStartsWithS(courses);
         //printCoursesThatHaveAtLeastFourLetters(courses);
-        printCoursesLength(courses);
+        //printCoursesLength(courses);
+        System.out.println(addNumbers(numbers));
 
     }
 }
