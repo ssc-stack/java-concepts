@@ -64,7 +64,7 @@ public class Main {
     }
 
     public static void createCoursesLengthList(List<String> courses) {
-        List<Integer> coursesLength=courses.stream().map(course->course.length()).collect(Collectors.toList());
+        List<Integer> coursesLength=courses.stream().distinct().map(course->course.length()).collect(Collectors.toList());
         System.out.println(coursesLength);
     }
 
