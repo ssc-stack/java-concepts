@@ -42,7 +42,7 @@ public class Main {
     }
 
     public static int addNumbers(List<Integer> numbers) {
-        return numbers.stream().reduce(0,(num1,num2)->num1+num2);
+        return numbers.stream().reduce(0,Integer::sum);
     }
 
     public static void main(String[] args) {
