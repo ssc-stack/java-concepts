@@ -37,6 +37,9 @@ public class Main {
         courses.stream().filter(course->course.length()>=4).forEach(System.out::println);
     }
 
+    public static void printCoursesLength(List<String> courses) {
+        courses.stream().map(course->course.length()).forEach(System.out::println);
+    }
 
     public static void main(String[] args) {
         List<Integer> numbers=List.of(1,2,3,4,5,6,7,8,9,10);
@@ -46,11 +49,12 @@ public class Main {
         //printEvenNumbers(numbers);
         //printOddNumbers(numbers);
         //printEvenSquares(numbers)
-        printOddCubes(numbers);
+        //printOddCubes(numbers);
         List<String> courses=List.of("Java","Python","JavaScript","C++","Ruby","Rust","Go","Kotlin","Swift","Scala");
         //printCourses(courses);
         //printCoursesThatStartsWithS(courses);
         //printCoursesThatHaveAtLeastFourLetters(courses);
+        printCoursesLength(courses);
 
     }
 }
