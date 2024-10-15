@@ -17,12 +17,18 @@ public class Main {
         numbers.stream().filter(number->number%2!=0).forEach(System.out::println);
     }
 
+    public static void printCourses(List<String> courses) {
+        courses.stream().forEach(System.out::println);
+    }
+
     public static void main(String[] args) {
         List<Integer> numbers=List.of(1,2,3,4,5,6,7,8,9,10);
         //numbers.stream().forEach(Main::printNumbers);
         //numbers.stream().forEach(number-> System.out.print(number+" "));
         //numbers.stream().forEach(System.out::println);
         //printEvenNumbers(numbers);
-        printOddNumbers(numbers);
+        //printOddNumbers(numbers);
+        List<String> courses=List.of("Java","Python","JavaScript","C++","Ruby","Rust","Go","Kotlin","Swift","Scala");
+        printCourses(courses);
     }
 }
