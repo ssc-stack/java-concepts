@@ -17,6 +17,14 @@ public class Main {
         numbers.stream().filter(number->number%2!=0).forEach(System.out::println);
     }
 
+    public static void printEvenSquares(List<Integer> numbers) {
+        numbers.stream().filter(number->number%2==0).map(number->number*number).forEach(System.out::println);
+    }
+
+    public static void printOddCubes(List<Integer> numbers) {
+        numbers.stream().filter(number->number%2!=0).map(n->n*n*n).forEach(System.out::println);
+    }
+
     public static void printCourses(List<String> courses) {
         courses.stream().forEach(System.out::println);
     }
@@ -29,6 +37,7 @@ public class Main {
         courses.stream().filter(course->course.length()>=4).forEach(System.out::println);
     }
 
+
     public static void main(String[] args) {
         List<Integer> numbers=List.of(1,2,3,4,5,6,7,8,9,10);
         //numbers.stream().forEach(Main::printNumbers);
@@ -36,9 +45,11 @@ public class Main {
         //numbers.stream().forEach(System.out::println);
         //printEvenNumbers(numbers);
         //printOddNumbers(numbers);
+        printEvenSquares(numbers);
         List<String> courses=List.of("Java","Python","JavaScript","C++","Ruby","Rust","Go","Kotlin","Swift","Scala");
         //printCourses(courses);
         //printCoursesThatStartsWithS(courses);
         //printCoursesThatHaveAtLeastFourLetters(courses);
+
     }
 }
