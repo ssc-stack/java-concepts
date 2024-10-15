@@ -1,6 +1,7 @@
 package org.example.functional.programming.v2;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -57,6 +58,10 @@ public class Main {
         courses.stream().distinct().sorted().forEach(System.out::println);
     }
 
+    public static void sortNumbersInDescendingOrder(List<Integer> numbers) {
+        numbers.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+    }
+
     public static void main(String[] args) {
         List<Integer> numbers=List.of(1,2,3,4,5,6,7,8,9,10);
         //numbers.stream().forEach(Main::printNumbers);
@@ -74,6 +79,7 @@ public class Main {
         //System.out.println(addNumbers(numbers));
         //System.out.println(evenSquareSum(numbers));
         //System.out.println(evenCubeSum(numbers));
-        printSortedDistinctCourses(courses);
+        //printSortedDistinctCourses(courses);
+        sortNumbersInDescendingOrder(numbers);
     }
 }
